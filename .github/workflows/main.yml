@@ -16,3 +16,5 @@ jobs:
           make
           zip mpv_thumbnail.zip mpv_thumbnail_script_server.lua mpv_thumbnail_script_client_osc.lua
           gh release create v$GITHUB_RUN_NUMBER mpv_thumbnail.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
